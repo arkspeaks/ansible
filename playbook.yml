@@ -1,0 +1,10 @@
+---
+name: copy cron script
+  shell: cp hello.sh /home/hello.sh 
+ 
+- cron:
+    name: "Installing Cron Hello Error";
+    user: "root";
+    minute: */5;
+    hour: *;
+    job: "bash /home/hello.sh";

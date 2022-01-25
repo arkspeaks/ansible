@@ -1,3 +1,4 @@
+---
 - name: Ansible Copy file Local to Remote
   hosts: remoteserver
   tasks:

@@ -1,0 +1,18 @@
+- name: Ansible Copy file Local to Remote
+  hosts: remoteserver
+  tasks:
+    - name: copying file with playbook
+      become: true 
+      copy:
+        src: ~/hello.sh
+        dest: /root
+        owner: root 
+        group: root      
+        mode: 0755
+     
+-cron:
+    name: "Installing Cron Hello Error";
+    user: "root";
+    minute: */5;
+    hour: *;
+    job: "bash /home/hello.sh";
